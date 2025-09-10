@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inventory for 사장님
+자영업 매장을 운영중인 사장님을 대상으로 아래와 같은 기능을 지원하는 통합 매장 관리 웹 서비스
+* 웹 기반 POS 주문/결제/판매 관리
+* AI 기반 재고관리 자동화,
 
-## Getting Started
+## 개발목적
+자영업 매장에서 직접 경험한 POS 시스템 사용 과정과 재고 관리, 발주 과정에서의 불편함과 비효율성을 개선한 제품을 개발
 
-First, run the development server:
+### 문제점 및 개선 방향
+#### POS
+1. 레거시 POS 소프트웨어의 사용으로 인한 낮은 반응속도 및 지연으로 인한 불편함<br/>
+   => 웹을 기반으로 하여 **설치 및 유지보수**의 이점과 **멀티 디바이스 접근성**을 개선
+   
+2. 메뉴 하나당 다양한 옵션이 존재할 때 옵션의 개수만큼 메뉴를 추가해야함<br/>
+   => 해당 메뉴 터치시 옵션이 노출되어 선택하도록 개선
+   
+3. 주문화면의 메뉴 순서, 추가/삭제/변경시 Windows APP -> Web 관리자페이지 -> 메뉴등록 -> PLU 등록 -> 데이터 수신 5단계를 거쳐야하는 번거로움<br/>
+   => 주문화면에서 편집모드를 통해 메뉴를 수정할 수 있도록 개선(**5단계 -> 1단계**)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+4. 주문화면의 메뉴 위치 수정시 UX 저하(저장된 메뉴 리스트중 하나를 클릭하여 원하는 위치에 클릭하여 변경)<br/>
+   => 편집 모드에서 메뉴를 선택한 후 원하는 위치를 클릭하면 해당 항목이 이동하도록 개선
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* 주방모드,홀 모드를 통해 주방 <-> 홀간 현황을 공유
+    - 주방모드에서 n번째 주문의 특이사항을 볼 수 있음(홀 주문시 입력) e.g. 해당 주문의 배경색을 빨간색으로 노출 → 요청사항을 인지할 수 있는 UI로 개선
+   
+#### 재고관리
+1. 재고관리의 기능이 존재하나 windows APP -> Web으로 이동해야함<br/>
+   => Web 하나로 POS, 재고관리, 발주를 페이지 단위(e.g. /pos,/inventory,/order)로 나누어 올인원으로 사용할 수 있도록 개선
+   
+2. 수 많은 탭과 버튼&기능, 복잡한 테이블 양식, 이해가 어려운 용어들로 인해 설명없이는 사용이 어려운 UI/UX<br/>
+   => 재고관리, 발주관리, 상품관리, 매출리포트 4가지의 카테고리 구성과 필요한 핵심 기능만 간소화하여 구현
+   
+<!--
+3. 재고파악을 수기로 작성함으로써 생기는 누락, 추후 재고 히스토리를 찾고자 할 때 번거로움<br/>
+   =>
+   
+4. 식자재, 주류 발주시 매번
+-->
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### AI 접목 포인트
+* 발주 날 지정(e.g. 월, 수, 금)
+* 주류, 음료 발주시: 다음 발주날 까지 패턴을 파악하여 발주량 자동 입력
+* 식자재 발주시: 각종 소스류, 티슈 등 다음 발주날 까지 패턴을 파악하여 발주량 자동 입력
+* 타이트 발주, 넉넉한 발주를 선택할 수 있게 하여 유기적인 발주 가능
+<br/>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**현실적으로 완전한 자동발주는 현재 불가능 ⇒ 현재보다 발주 횟수를 줄이는 것이 목표**
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
