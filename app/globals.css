@@ -146,7 +146,7 @@
     --color-secondary-400: #2fadff;
     --color-secondary-600: #0074d0;
     --color-label-100: #f9fafb;
-    --color-label-200: #f3f4f6;
+    --color-label-200: #f3f4f6db;
     --color-label-500: #9ca3af;
     --color-label-700: #6e747e;
     --color-label-800: #32373f;
@@ -297,6 +297,9 @@
   .bg-label-700 {
     background-color: var(--color-label-700);
   }
+  .bg-label-800 {
+    background-color: var(--color-label-800);
+  }
   .bg-label-900 {
     background-color: var(--color-label-900);
   }
@@ -368,6 +371,9 @@
   }
   .text-label-100 {
     color: var(--color-label-100);
+  }
+  .text-label-200 {
+    color: var(--color-label-200);
   }
   .text-label-500 {
     color: var(--color-label-500);
