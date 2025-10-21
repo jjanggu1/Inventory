@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/widgets/Header/Header";
 
 export const metadata: Metadata = {
   title: "Inventory For 사장님",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${pretendard.variable} font-pretendard`}>
+        <Header />
         {children}
       </body>
     </html>
