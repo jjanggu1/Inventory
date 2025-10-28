@@ -5,13 +5,13 @@ import { IoMdSettings } from "react-icons/io";
 
 export default function Menu() {
   return (
-    <div className="w-full px-12 py-10 absolute top-0 left-0 z-10 min-h-full flex flex-col bg-background-default">
+    <div className="fixed inset-0 top-[56px] md:top-[67px] z-10 flex flex-col bg-background-default px-12 py-10">
       <header className="mb-10">
         <h1 className="text-label-900 text-title-1 font-bold">매장관리</h1>
       </header>
       <main>
         <nav className="md:flex w-full">
-          <div className="flex-1 text-title-3 font-semibold mb-12">
+          <div className="flex-1 text-title-3 text-label-900 font-semibold mb-12">
             <h2 className="flex items-center gap-2 text-label-500 mb-6">
               <MdOutlineBarChart />
               매출
@@ -43,7 +43,7 @@ export default function Menu() {
               </li>
             </ul>
           </div>
-          <div className="flex-1 text-title-3 font-semibold mb-12">
+          <div className="flex-1 text-title-3 text-label-900 font-semibold mb-12">
             <h2 className="flex items-center gap-2 text-label-500 mb-6">
               <FaBoxArchive />
               상품
@@ -75,7 +75,7 @@ export default function Menu() {
               </li>
             </ul>
           </div>
-          <div className="flex-1 text-title-3 font-semibold mb-12">
+          <div className="flex-1 text-title-3 text-label-900 font-semibold mb-12">
             <h2 className="flex items-center gap-2 text-label-500 mb-6">
               <IoMdSettings />
               설정
