@@ -1,14 +1,11 @@
 "use client";
 
-import Menu from "@/shared/ui/menu";
-import { useMenuStore } from "@/shared/store";
-
 export default function Home() {
-  const { isMenuOpen } = useMenuStore();
   return (
-    <main className="flex-1 relative px-6 items-center justify-items-center">
-      <h1 className="text-label-100 text-display-1">Inventory For 사장님</h1>
-      {isMenuOpen && <Menu />}
+    <main className="flex-1 px-6 items-center justify-items-center">
+      <h1 className="text-label-900 text-display-1">
+        로그인 페이지(/login)로 리다이렉트할 예정(서비스 진입점)
+      </h1>
     </main>
   );
 }
