@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/widgets/Header/Header";
 
 export const metadata: Metadata = {
   title: "Inventory For 사장님",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const pretendard = localFont({
-  src: "../../public/fonts/PretendardVariable.woff2",
+  src: "../public/fonts/PretendardVariable.woff2",
   variable: "--font-pretendard",
   display: "swap",
   weight: "45 920",
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${pretendard.variable} font-pretendard`}>
+      <body
+        className={`antialiased ${pretendard.variable} font-pretendard flex flex-col min-h-screen`}
+      >
+        <Header />
         {children}
       </body>
     </html>
