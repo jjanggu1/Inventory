@@ -146,7 +146,7 @@
     --color-secondary-400: #2fadff;
     --color-secondary-600: #0074d0;
     --color-label-100: #f9fafb;
-    --color-label-200: #f3f4f6;
+    --color-label-200: #f3f4f6db;
     --color-label-500: #9ca3af;
     --color-label-700: #6e747e;
     --color-label-800: #32373f;
@@ -297,6 +297,9 @@
   .bg-label-700 {
     background-color: var(--color-label-700);
   }
+  .bg-label-800 {
+    background-color: var(--color-label-800);
+  }
   .bg-label-900 {
     background-color: var(--color-label-900);
   }
@@ -369,6 +372,9 @@
   .text-label-100 {
     color: var(--color-label-100);
   }
+  .text-label-200 {
+    color: var(--color-label-200);
+  }
   .text-label-500 {
     color: var(--color-label-500);
   }
@@ -419,6 +425,179 @@
   @keyframes skeleton-shimmer {
     100% {
       transform: translateX(100%);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:container {
+      width: 100%;
+    }
+    @media (min-width: 40rem) {
+      .md\:container {
+        max-width: 40rem;
+      }
+    }
+    @media (min-width: 48rem) {
+      .md\:container {
+        max-width: 48rem;
+      }
+    }
+    @media (min-width: 64rem) {
+      .md\:container {
+        max-width: 64rem;
+      }
+    }
+    @media (min-width: 80rem) {
+      .md\:container {
+        max-width: 80rem;
+      }
+    }
+    @media (min-width: 96rem) {
+      .md\:container {
+        max-width: 96rem;
+      }
+    }
+    .md\:container {
+      margin-inline: auto;
+      padding-inline: 1.25rem;
+    }
+    @media (min-width: 48rem) {
+      .md\:container {
+        padding-inline: 2.5rem;
+      }
+    }
+    @media (min-width: 64rem) {
+      .md\:container {
+        padding-inline: 20px;
+      }
+    }
+
+    .md\:mt-7 {
+      margin-top: var(--spacing-7);
+    }
+    .md\:mt-9 {
+      margin-top: var(--spacing-9);
+    }
+    .md\:mt-10 {
+      margin-top: var(--spacing-10);
+    }
+
+    .md\:flex {
+      display: flex;
+    }
+    .md\:hidden {
+      display: none;
+    }
+
+    .md\:\!size-10 {
+      width: var(--spacing-10) !important;
+      height: var(--spacing-10) !important;
+    }
+    .md\:size-10 {
+      width: var(--spacing-10);
+      height: var(--spacing-10);
+    }
+
+    .md\:h-\[56px\] {
+      height: 56px;
+    }
+    .md\:h-breadcrumb-tablet {
+      height: var(--spacing-breadcrumb-tablet);
+    }
+    .md\:min-h-\[calc\(100dvh-358px-64px\)\] {
+      min-height: calc(100dvh - 422px);
+    }
+    .md\:w-\[400px\] {
+      width: 400px;
+    }
+
+    .md\:grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .md\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:flex-row {
+      flex-direction: row;
+    }
+    .md\:flex-nowrap {
+      flex-wrap: nowrap;
+    }
+    .md\:items-center {
+      align-items: center;
+    }
+    .md\:justify-between {
+      justify-content: space-between;
+    }
+
+    .md\:gap-6 {
+      gap: var(--spacing-6);
+    }
+    .md\:gap-8 {
+      gap: var(--spacing-8);
+    }
+    .md\:gap-11 {
+      gap: var(--spacing-11);
+    }
+
+    .md\:rounded-xl {
+      border-radius: var(--radius-xl);
+    }
+
+    .md\:px-7 {
+      padding-inline: var(--spacing-7);
+    }
+    .md\:py-6 {
+      padding-block: var(--spacing-6);
+    }
+    .md\:py-\[40px\] {
+      padding-block: 40px;
+    }
+
+    .md\:text-body-1 {
+      font-size: var(--text-body-1);
+      line-height: var(--tw-leading, var(--text-body-1--line-height));
+    }
+    .md\:text-body-2 {
+      font-size: var(--text-body-2);
+      line-height: var(--tw-leading, var(--text-body-2--line-height));
+    }
+    .md\:text-body-3 {
+      font-size: var(--text-body-3);
+      line-height: var(--tw-leading, var(--text-body-3--line-height));
+    }
+    .md\:text-display-2 {
+      font-size: var(--text-display-2);
+      line-height: var(--tw-leading, var(--text-display-2--line-height));
+    }
+    .md\:text-title-1 {
+      font-size: var(--text-title-1);
+      line-height: var(--tw-leading, var(--text-title-1--line-height));
+    }
+    .md\:text-title-2 {
+      font-size: var(--text-title-2);
+      line-height: var(--tw-leading, var(--text-title-2--line-height));
+    }
+    .md\:text-title-3 {
+      font-size: var(--text-title-3);
+      line-height: var(--tw-leading, var(--text-title-3--line-height));
+    }
+    .md\:text-title-4 {
+      font-size: var(--text-title-4);
+      line-height: var(--tw-leading, var(--text-title-4--line-height));
+    }
+    .md\:text-\[44px\] {
+      font-size: 44px;
+    }
+
+    .md\:font-bold {
+      --tw-font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);
+    }
+    .md\:font-semibold {
+      --tw-font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-semibold);
     }
   }
 }
