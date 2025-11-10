@@ -326,6 +326,12 @@
   .bg-primary {
     background-color: var(--color-primary);
   }
+  .bg-secondary-600 {
+    background-color: var(--color-secondary-600);
+  }
+  .bg-dimmed {
+    background-color: var(--color-material-dimmed);
+  }
 
   .text-body-1 {
     font-size: var(--text-body-1);
