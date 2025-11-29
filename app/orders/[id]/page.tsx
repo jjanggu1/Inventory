@@ -7,7 +7,7 @@ import { MdPrint } from "react-icons/md";
 import { FaTrash } from "react-icons/fa6";
 import Link from "next/link";
 
-export default function OrderPage() {
+export default function OrdersPage() {
   let menuCategoryList = [
     {
       id: 1,

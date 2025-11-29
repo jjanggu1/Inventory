@@ -4,7 +4,7 @@ import { FaPen, FaWonSign } from "react-icons/fa6";
 import { IoIosArrowBack } from "react-icons/io";
 import { BsFillCreditCardFill } from "react-icons/bs";
 
-export default function PaymentPage() {
+export default function PaymentsPage() {
   return (
     <div className="lg:flex h-[calc(100dvh-56px)] md:h-[calc(100dvh-67px)] top-[-56px] md:top-[-67px]">
       <section className="flex-[7] px-6 pb-6 bg-background-default border-r-2 border-line-400">
