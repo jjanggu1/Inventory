@@ -5,11 +5,12 @@ import { FiMenu, FiMoreVertical, FiX } from "react-icons/fi";
 import { useCurrentDateTime } from "@/shared/hooks/useCurrentDateTime";
 import { useMenuStore } from "@/shared/store";
 import Menu from "@/shared/ui/menu";
+import { useActiveViewStore } from "@/shared/store";
 
 export default function Header() {
   const currentDateTime = useCurrentDateTime();
   const { isMenuOpen, setIsMenuOpen } = useMenuStore();
-
+  const { activeView, setActiveView } = useActiveViewStore();
   return (
     <header className="w-full relative flex items-center justify-between px-6 py-4 text-label-500 bg-label-800">
       <div>
@@ -26,11 +27,21 @@ export default function Header() {
       </div>
       <nav>
         <ul className="flex items-center gap-4 text-body-2 md:text-title-2 font-bold">
-          <li className="px-8 py-4 rounded-md cursor-pointer text-label-100 active:bg-label-700 active:scale-95 active:duration-100 transition-all">
+          <li
+            onClick={() => setActiveView("tables")}
+            className={`px-8 py-4 rounded-md cursor-pointer active:bg-label-700 active:scale-95 active:duration-100 transition-all ${
+              activeView === "tables" ? "text-label-100" : "text-label-500"
+            }`}
+          >
             <Link href="/tables">테이블</Link>
           </li>
-          <li className="px-8 py-4 rounded-md cursor-pointer active:bg-label-700 active:scale-95 active:duration-100 transition-all">
-            <Link href="/status">현황</Link>
+          <li
+            onClick={() => setActiveView("kitchen")}
+            className={`px-8 py-4 rounded-md cursor-pointer active:bg-label-700 active:scale-95 active:duration-100 transition-all ${
+              activeView === "kitchen" ? "text-label-100" : "text-label-500"
+            }`}
+          >
+            <Link href="/kitchen">주방</Link>
           </li>
         </ul>
       </nav>
