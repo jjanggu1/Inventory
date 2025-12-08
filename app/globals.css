@@ -158,6 +158,7 @@
     --color-line-400: #dfe3e8;
     --color-status-correct: #07cc32;
     --color-status-error: #ff2d2d;
+    --color-status-caution: #f9bc1e;
     --color-status-disable: #cbd5e1;
     --color-component-dark: #23272e;
     --color-component-light: #d1d5db;
@@ -309,6 +310,18 @@
   }
   .bg-line-400 {
     background-color: var(--color-line-400);
+  }
+  .bg-status-caution {
+    background-color: var(--color-status-caution);
+  }
+  .bg-status-error {
+    background-color: var(--color-status-error);
+  }
+  .bg-status-correct {
+    background-color: var(--color-status-correct);
+  }
+  .bg-status-disable {
+    background-color: var(--color-status-disable);
   }
 
   .bg-material-dimmed\/75 {
