@@ -1,7 +1,7 @@
 "use client";
 import { IoMdSettings } from "react-icons/io";
 import Tabs from "@/shared/ui/tabs";
-import Tables from "@/entities/Table/ui/tables";
+import Tables from "@/entities/table/ui/tables";
 
 export default function TablesPage() {
   let spaceList = [
