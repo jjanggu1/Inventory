@@ -142,6 +142,7 @@
 
     /* Colors */
     --color-primary: #18a0fb;
+    --color-secondary-50: #eff8ff;
     --color-secondary-300: #77c9ff;
     --color-secondary-400: #2fadff;
     --color-secondary-600: #0074d0;
@@ -325,6 +326,15 @@
 
   .bg-primary {
     background-color: var(--color-primary);
+  }
+  .bg-secondary-50 {
+    background-color: var(--color-secondary-50);
+  }
+  .bg-secondary-600 {
+    background-color: var(--color-secondary-600);
+  }
+  .bg-dimmed {
+    background-color: var(--color-material-dimmed);
   }
 
   .text-body-1 {
