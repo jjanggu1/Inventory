@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/widgets/header/Header";
+import Header from "@/widgets/Header/Header";
 
 export const metadata: Metadata = {
   title: "Inventory For 사장님",
