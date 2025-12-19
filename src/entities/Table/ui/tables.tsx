@@ -7,11 +7,8 @@ export default function Tables() {
     <>
       {/* 사용가능한 테이블 */}
       {Array.from({ length: 21 }).map((_, index) => (
-        <Link href={`/orders/${index}`}>
-          <div
-            key={index}
-            className="w-full lg:min-w-[180px] lg:max-w-[180px] xl:min-w-[260px] xl:max-w-[260px] xl:min-h-[140px] min-h-[100px] lg:max-h-[110px]  bg-background-default rounded-sm border-3 border-secondary-600"
-          >
+        <Link key={index} href={`/orders/${index}`}>
+          <div className="w-full lg:min-w-[180px] lg:max-w-[180px] xl:min-w-[260px] xl:max-w-[260px] xl:min-h-[140px] min-h-[100px] lg:max-h-[110px] bg-background-default rounded-sm border-3 border-secondary-600">
             <h1 className="text-body-3 text-label-900 font-semibold text-center pt-2">
               홀1 테이블
             </h1>
