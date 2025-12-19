@@ -8,7 +8,7 @@ import MenuOptions from "@/entities/order/ui/MenuOption";
 import OrderCart from "@/entities/order/ui/OrderCart";
 
 export default function OrdersPage() {
-  let menuCategoryList = [
+  const menuCategoryList = [
     {
       id: 1,
       name: "활어회",

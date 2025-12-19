@@ -3,7 +3,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-export default function Tabs({ tabsList }: { tabsList: any[] }) {
+export default function Tabs({
+  tabsList,
+}: {
+  tabsList: { id: number; name: string }[];
+}) {
   const [activeTab, setActiveTab] = useState(tabsList[0].name);
   return (
     <div className="w-full flex flex-[7] items-center">

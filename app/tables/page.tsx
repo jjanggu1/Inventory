@@ -4,7 +4,7 @@ import Tabs from "@/shared/ui/tabs";
 import Tables from "@/entities/Table/ui/tables";
 
 export default function TablesPage() {
-  let spaceList = [
+  const spaceList = [
     {
       id: 1,
       name: "1층",
